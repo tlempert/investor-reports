@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silicon Council — Investment Reports</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; padding: 2rem; }
+        h1 { font-size: 1.8rem; margin-bottom: 0.5rem; color: #fff; }
+        .subtitle { color: #888; margin-bottom: 2rem; font-size: 0.95rem; }
+        .reports { list-style: none; }
+        .reports li { padding: 0.75rem 0; border-bottom: 1px solid #222; }
+        .reports a { color: #4fc3f7; text-decoration: none; font-size: 1.05rem; }
+        .reports a:hover { text-decoration: underline; }
+        .date { color: #666; font-size: 0.85rem; margin-left: 0.5rem; }
+        .empty { color: #555; font-style: italic; margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <h1>Silicon Council</h1>
+    <p class="subtitle">Investment Analysis Reports</p>
+    <ul class="reports" id="reports">
+        <!-- Reports will be listed here -->
+    </ul>
+    <p class="empty" id="empty">No reports yet. Run <code>/analyze-company</code> to generate one.</p>
+    <script>
+        // Auto-discover reports by convention: each report is TICKER.html
+        // For now, manually maintained. Could be automated with a build step.
+    </script>
+</body>
+</html>

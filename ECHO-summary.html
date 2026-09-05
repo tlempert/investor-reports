@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="#2a78d6,#eb6834,#1baf7a">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Silicon Council verdict on EchoStar (Nasdaq: ECHO): PASS, 0% position at $89.80. 12 experts, 3 adversarial review passes. The entire price rests on one unresolved number.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ECHO · EchoStar — Silicon Council Verdict: PASS">
+<meta property="og:description" content="Strip out the SpaceX stake and EchoStar is worth −$16.53 to +$3.24/share. Published marks for that stake span $11.1B to $53B — wider than the whole company. 12 experts, 19 fatal review findings.">
+<meta property="og:url" content="https://tlempert.github.io/investor-reports/ECHO-summary.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ECHO · EchoStar — Silicon Council Verdict: PASS">
+<meta name="twitter:description" content="The entire $89.80 price rests on one number nobody has established.">
+<title>ECHO — EchoStar Corporation · Silicon Council Verdict</title>
+<style>
+  :root{
+    color-scheme: light;
+    --surface-1:#fcfcfb; --plane:#f9f9f7;
+    --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,0.10);
+    --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a;
+    --good:#0ca30c; --warning:#fab219; --serious:#ec835a; --critical:#d03b3b;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:where(:not([data-theme="light"])){
+      color-scheme: dark;
+      --surface-1:#1a1a19; --plane:#0d0d0d;
+      --ink:#ffffff; --ink-2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,0.10);
+      --s1:#3987e5; --s2:#d95926; --s3:#199e70;
+    }
+  }
+  :root[data-theme="dark"]{
+    color-scheme: dark;
+    --surface-1:#1a1a19; --plane:#0d0d0d;
+    --ink:#ffffff; --ink-2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,0.10);
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--plane); color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.55; font-size:15px;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:32px 20px 72px}
+  header.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+  h1{font-size:30px;margin:0 0 4px;letter-spacing:-0.02em}
+  .sub{color:var(--ink-2);font-size:14px;margin:0}
+  .card{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:22px}
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:0.09em;color:var(--ink-2);margin:0 0 16px;font-weight:650}
+  h3{font-size:16px;margin:22px 0 8px}
+  p{margin:0 0 12px}
+  .verdict-row{display:flex;gap:28px;align-items:baseline;flex-wrap:wrap}
+  .hero{font-size:60px;font-weight:680;letter-spacing:-0.03em;line-height:1;color:var(--s2)}
+  .hero-note{font-size:15px;color:var(--ink-2);max-width:520px}
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-top:20px}
+  .tile{background:var(--surface-1);padding:14px 16px}
+  .tile .k{font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin-bottom:5px}
+  .tile .v{font-size:23px;font-weight:620;letter-spacing:-0.02em}
+  .tile .m{font-size:12px;color:var(--ink-2);margin-top:2px}
+  table{border-collapse:collapse;width:100%;font-size:14px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--grid);vertical-align:top}
+  th{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);font-weight:600}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  .pill{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:650;padding:2px 8px;border-radius:20px;border:1px solid var(--border);white-space:nowrap}
+  .ok{color:var(--good)} .bad{color:var(--critical)} .warn{color:var(--serious)}
+  .flag{border-left:3px solid var(--critical);background:color-mix(in srgb,var(--critical) 6%,var(--surface-1));padding:13px 16px;border-radius:0 8px 8px 0;margin:12px 0}
+  .flag.amber{border-left-color:var(--warning);background:color-mix(in srgb,var(--warning) 8%,var(--surface-1))}
+  .flag .t{font-weight:650;margin-bottom:4px;font-size:14px}
+  .flag p{font-size:14px;margin:0 0 6px}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:var(--ink-2);margin-bottom:10px}
+  .legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+  figure{margin:0}
+  figcaption{font-size:12.5px;color:var(--ink-2);margin-top:10px}
+  .tt{position:fixed;pointer-events:none;opacity:0;transition:opacity .09s;background:var(--surface-1);border:1px solid var(--border);
+      border-radius:7px;padding:8px 10px;font-size:12.5px;box-shadow:0 4px 14px rgba(0,0,0,.14);z-index:20;max-width:250px}
+  .tt b{display:block;margin-bottom:3px}
+  .toggle{background:var(--surface-1);border:1px solid var(--border);color:var(--ink-2);border-radius:7px;padding:6px 12px;font-size:12.5px;cursor:pointer;font-family:inherit}
+  details{margin-top:12px} summary{cursor:pointer;font-size:13px;color:var(--ink-2)}
+  ul{margin:0 0 12px;padding-left:20px} li{margin-bottom:6px}
+  .foot{font-size:12.5px;color:var(--muted);margin-top:34px;border-top:1px solid var(--grid);padding-top:16px}
+  code{font-size:13px;background:color-mix(in srgb,var(--ink) 6%,transparent);padding:1px 5px;border-radius:4px}
+  @media (max-width:640px){ .hero{font-size:44px} h1{font-size:24px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div>
+    <h1>ECHO · EchoStar Corporation</h1>
+    <p class="sub">Silicon Council verdict · analysis date 5 September 2026 · Nasdaq · ticker renamed from <strong>SATS</strong> on 24 June 2026</p>
+  </div>
+  <button class="toggle" id="themeBtn" type="button">Toggle theme</button>
+</header>
+
+<!-- VERDICT -->
+<section class="card">
+  <h2>Verdict</h2>
+  <div class="verdict-row">
+    <div class="hero">PASS</div>
+    <div class="hero-note">
+      Not a buy at $89.80, and not a short. The council could not price the company's largest asset,
+      and the governance disclosure gaps do not resolve on any published calendar.
+    </div>
+  </div>
+  <div class="tiles">
+    <div class="tile"><div class="k">Price</div><div class="v">$89.80</div><div class="m">at analysis</div></div>
+    <div class="tile"><div class="k">Trigger band</div><div class="v">$40–56</div><div class="m">editor-corrected</div></div>
+    <div class="tile"><div class="k">Position size</div><div class="v">0%</div><div class="m">conviction: low</div></div>
+    <div class="tile"><div class="k">Hurdle rate</div><div class="v">13.0%</div><div class="m">vs 4.78% UST 10y</div></div>
+    <div class="tile"><div class="k">Market cap</div><div class="v">$31.6B</div><div class="m">diluted · $26.1B basic</div></div>
+    <div class="tile"><div class="k">Moat flag</div><div class="v" style="color:var(--critical)">SEVERE</div><div class="m">11 of 12 experts</div></div>
+  </div>
+</section>
+
+<!-- THE CENTRAL CHART -->
+<section class="card">
+  <h2>The only question that matters</h2>
+  <p>Strip out the SpaceX stake and EchoStar's remaining businesses are worth somewhere between
+  <strong>−$16.53 and +$3.24 per share</strong>. So essentially the entire $89.80 price rests on one number nobody has established:
+  what EchoStar's stake in SpaceX is actually worth. Published figures span <strong>$11.1B to $53B</strong> —
+  a spread wider than the whole company's market value.</p>
+
+  <div class="legend">
+    <span><i style="background:var(--s1)"></i>Fair value range per share (NAV uncertainty)</span>
+    <span><i style="background:var(--critical);height:2px;border-radius:0"></i>Current price $89.80</span>
+  </div>
+
+  <figure>
+    <svg id="fvChart" viewBox="0 0 860 340" width="100%" role="img"
+         aria-label="Fair value per share at three published SpaceX stake marks. Only the highest mark, 53 billion dollars, produces a fair value above the 89.80 dollar price.">
+    </svg>
+    <figcaption>
+      Each bar is the fair value per share implied by one published mark for the SpaceX stake, after a 25% discount for lack of
+      marketability, spread over the corrected net-asset range for everything else. <strong>Only the highest mark clears the price.</strong>
+      The $22.2B mark that appeared in draft 2 is excluded — it was withdrawn in review as re-badged arithmetic.
+    </figcaption>
+  </figure>
+
+  <details>
+    <summary>View as table</summary>
+    <table style="margin-top:10px">
+      <thead><tr><th>SpaceX stake mark</th><th>Source tier</th><th class="num">After 25% DLOM</th><th class="num">Per share</th><th class="num">Fair value range</th><th>vs $89.80</th></tr></thead>
+      <tbody>
+        <tr><td>$11.1B</td><td>Company-linked carrying value</td><td class="num">$8.33B</td><td class="num">$23.68</td><td class="num">$7.15 – $26.92</td><td class="bad">92–68% below</td></tr>
+        <tr><td>$32B</td><td>Media, at $1.45T SpaceX</td><td class="num">$24.00B</td><td class="num">$68.25</td><td class="num">$51.72 – $71.49</td><td class="bad">42–20% below</td></tr>
+        <tr><td>$53B</td><td>Media / analyst estimate</td><td class="num">$39.75B</td><td class="num">$113.05</td><td class="num">$96.52 – $116.29</td><td class="ok">7–29% above</td></tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+
+<!-- COUNCIL VOTE -->
+<section class="card">
+  <h2>Council vote · 12 experts</h2>
+  <figure>
+    <svg id="voteChart" viewBox="0 0 860 190" width="100%" role="img"
+         aria-label="Council vote: 7 WAIT, 3 PASS, 1 BUY, 1 SELL."></svg>
+    <figcaption>Verdicts as cast, before synthesis. The Moat Tribunal was unanimous at 5 of 5 SEVERE;
+    11 of 12 experts overall flagged the moat SEVERE. Peter Lynch was the lone BUY and the lone MODERATE.</figcaption>
+  </figure>
+  <p style="margin-top:14px;font-size:14px;color:var(--ink-2)">
+    <strong>The dissent was taken seriously, not outvoted.</strong> Lynch argued that AT&amp;T and SpaceX together paid
+    ~$41.9–44.6B for spectrum EchoStar no longer owns, against a corrected enterprise value of $27.21B. The synthesis
+    conceded he wins that comparison outright — the first draft's refutation of it was arithmetically wrong — but held that
+    gross consideration is not a valuation once run through a bridge.
+  </p>
+</section>
+
+<!-- FACT VALIDATION -->
+<section class="card">
+  <h2>Fact validation</h2>
+  <p>Every load-bearing figure was recomputed from primary inputs rather than accepted as printed.
+  <strong>22 of 24 checks reproduce exactly.</strong> Two do not, and both are recorded below rather than smoothed over.</p>
+
+  <table>
+    <thead><tr><th>Check</th><th class="num">Computed</th><th class="num">Stated</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr><td>Diluted market cap (351.622M × $89.80)</td><td class="num">$31.58B</td><td class="num">$31.57B</td><td class="ok">✓</td></tr>
+      <tr><td>Diluted share bridge (290.141 + 58.007 + 3.474)</td><td class="num">351.622M</td><td class="num">351.622M</td><td class="ok">✓</td></tr>
+      <tr><td>Total debt ($1,446.3M + $15,985.4M)</td><td class="num">$17.432B</td><td class="num">$17.432B</td><td class="ok">✓</td></tr>
+      <tr><td>Enterprise value ($31.58 + $17.43 − $21.80)</td><td class="num">$27.21B</td><td class="num">$27.21B</td><td class="ok">✓</td></tr>
+      <tr><td>FY2025 EPS (−$14,497.2M ÷ 287.589M)</td><td class="num">−$50.41</td><td class="num">−$50.41</td><td class="ok">✓</td></tr>
+      <tr><td>Impairments ($16.102B + $1.530B)</td><td class="num">$17.632B</td><td class="num">$17.632B</td><td class="ok">✓</td></tr>
+      <tr><td>AT&amp;T contract less cash received ($22.650 − $20.250)</td><td class="num">$2.400B</td><td class="num">$2.400B</td><td class="ok">✓ = FCC trust</td></tr>
+      <tr><td>Pay-TV Q2 OIBDA margin ($600.7M ÷ $2,249M)</td><td class="num">26.71%</td><td class="num">26.7%</td><td class="ok">✓</td></tr>
+      <tr><td>Pay-TV half-life at 15% decay</td><td class="num">4.27 yrs</td><td class="num">4.3 yrs</td><td class="ok">✓</td></tr>
+      <tr><td>Price / book ($89.80 ÷ $48.73)</td><td class="num">1.843×</td><td class="num">1.84×</td><td class="ok">✓</td></tr>
+      <tr><td><strong>Boost subscriber roll-forward</strong> (7.53M − 118K)</td><td class="num">7.412M</td><td class="num">7.38M</td><td class="bad">✗ 32K gap</td></tr>
+      <tr><td><strong>"$89.80 requires SpaceX at $1.3–2.5T"</strong></td><td class="num">$1.41–2.26T</td><td class="num">$1.3–2.5T</td><td class="bad">✗ not reproducible</td></tr>
+    </tbody>
+  </table>
+
+  <div class="flag">
+    <div class="t">The headline "$1.3–2.5 trillion" is wider than its own inputs support</div>
+    <p>Working the requirement across every combination of basic/diluted share count and the memo's own two net-asset
+    ranges gives <strong>$1.41T to $2.26T</strong>. Neither published endpoint reproduces: the low is too low and the high too high,
+    so the band <em>overstates</em> uncertainty at both ends. The direction of the claim survives — $89.80 does require a SpaceX
+    valuation well above the $1.45T most commonly cited — but the specific band should not be quoted.</p>
+  </div>
+
+  <div class="flag amber">
+    <div class="t">Boost subscriber counts don't roll forward</div>
+    <p>Q1 2026 closed at 7.53M; Q2 reported a decrease of ~118K and a close of 7.38M. Those cannot all be true —
+    7.53 − 0.118 = 7.412M, a 32,000 gap. This is an inconsistency between two <em>sources</em> (a trade-press Q1 report and the
+    company's Q2 release), not an error introduced by the council. The direction — Boost is shrinking after adding
+    212K a year earlier — is unaffected.</p>
+  </div>
+</section>
+
+<!-- INTEGRITY -->
+<section class="card">
+  <h2>Read the report with these caveats</h2>
+
+  <div class="flag">
+    <div class="t">1 · The report contradicts itself on the SpaceX reconciliation</div>
+    <p>The memo's <em>Thesis in One Sentence</em> and <em>Load-Bearing Factors</em> still assert that a constant 2.207% stake
+    reconciles the four conflicting figures as one holding at four SpaceX valuations. <strong>That claim was withdrawn in
+    review</strong> as a divisor tautology — <code>V/s ≡ implied EV</code> holds for any two numbers, so it cannot fail and
+    proves nothing. It rests on a single media-tier source and assumes a stock split the dossier expressly forbids assuming.
+    The correction block at the top of the report supersedes the body; the body was not rewritten. <strong>Do not quote the
+    2.207% figure.</strong></p>
+  </div>
+
+  <div class="flag">
+    <div class="t">2 · "Eleven of twelve cells" is nine of twelve</div>
+    <p>Stated twice in the memo, once in the Final Decision. A true statement about one grid was transposed onto another.
+    The error runs toward the verdict the memo had already reached.</p>
+  </div>
+
+  <div class="flag amber">
+    <div class="t">3 · The automated valuation anchors are meaningless here and were discarded</div>
+    <p>The pipeline produced a Graham floor of <strong>−$237.14</strong> and DCF values of <strong>−$99.07 / −$98.57</strong>.
+    These are correct outputs of a growth-DCF applied to a trailing year containing a $17.63B non-cash impairment, from a company
+    that has since sold its principal assets. They describe a company that no longer exists. Discarding them was verified correct
+    in review.</p>
+  </div>
+
+  <div class="flag amber">
+    <div class="t">4 · Two subsidiaries are in Chapter 11 — the parent is a debtor in neither</div>
+    <p>DISH DBS and DISH Wireless filed a prepackaged Chapter 11 on 30 June 2026; Hughes Satellite Systems filed separately on
+    2–3 August 2026 after failing to repay a $1.5B maturity. Headlines reading "EchoStar went bankrupt" are wrong, but so is
+    treating the parent's assets as cleanly ring-fenced: a §363 sale of the estate's alter-ego and veil-piercing claims against
+    EchoStar and its insiders is in play, and its outcome is <strong>not established in either direction</strong>.</p>
+  </div>
+</section>
+
+<!-- BUSINESS -->
+<section class="card">
+  <h2>What happened to this company</h2>
+  <p>EchoStar spent 2025 building a national 5G network, then abandoned it under FCC pressure and sold nearly all its spectrum.
+  Chairman Charlie Ergen called it a <em>forced pivot</em> — "we would win the battle, lose the war." What remains is a holding
+  company: cash, an unmarked stake in SpaceX, and three shrinking legacy businesses.</p>
+
+  <table>
+    <thead><tr><th>Event</th><th>Date</th><th>Consideration</th></tr></thead>
+    <tbody>
+      <tr><td>Skipped ~$326M interest payment, used grace period as FCC leverage</td><td>30 May 2025</td><td>—</td></tr>
+      <tr><td>Ergen replaces Akhavan as CEO · reason not disclosed</td><td>6 Nov 2025</td><td>—</td></tr>
+      <tr><td>AWS-4 / H-block spectrum → SpaceX</td><td>2025</td><td>~$19–19.6B in SpaceX <strong>stock</strong></td></tr>
+      <tr><td>AWS-3 spectrum → SpaceX</td><td>Nov 2025</td><td>~$2.6B in SpaceX <strong>stock</strong></td></tr>
+      <tr><td>DISH DBS + DISH Wireless prepackaged Chapter 11</td><td>30 Jun 2026</td><td>$4.75B repaid cash · $5.0B reinstated</td></tr>
+      <tr><td>Akhavan resigns, effective immediately</td><td>6 Jul 2026</td><td>—</td></tr>
+      <tr><td><strong>600 MHz + 3.45 GHz spectrum → AT&amp;T · closed</strong></td><td>28 Jul 2026</td><td><strong>$20.25B cash received</strong> (contract $22.65B)</td></tr>
+      <tr><td>Hughes Satellite Systems Chapter 11</td><td>2–3 Aug 2026</td><td>Could not repay $1.5B maturity</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Every operating business is shrinking</h3>
+  <table>
+    <thead><tr><th>Segment</th><th class="num">Q2 2026 revenue</th><th class="num">Q2 OIBDA</th><th>Subscriber trend</th></tr></thead>
+    <tbody>
+      <tr><td>Pay-TV (DISH + Sling)</td><td class="num">$2,249M</td><td class="num">$600.7M</td><td class="bad">−241K to 6.39M</td></tr>
+      <tr><td>Wireless (Boost)</td><td class="num">$929.0M</td><td class="num">$50.8M</td><td class="bad">−118K to 7.38M · was +212K a year earlier</td></tr>
+      <tr><td>Broadband &amp; Satellite (Hughes)</td><td class="num">$316.9M</td><td class="num">$100.2M</td><td class="bad">−21% broadband in one year, to Starlink</td></tr>
+      <tr><td>Other</td><td class="num">$91.5M</td><td class="num">−$71.1M</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Governance</h3>
+  <p>Charlie Ergen holds approximately <strong>90.3% of the votes on 50.9% of the economics</strong>. There is no dividend, and a
+  $5B buyback authorisation is blocked by bond indentures. Roughly $20B is destined for "EchoStar Capital," a division whose
+  mandate is disclosed nowhere in the file. The synthesis concluded a minority holder is <strong>a passenger</strong> — not
+  because of the litigation, but because no outsider can determine which legal entity owns 74% of the Pay-TV business, where
+  $8.9B of debt went in six months, or what the $20B is for.</p>
+</section>
+
+<!-- PROCESS -->
+<section class="card">
+  <h2>How this verdict was produced</h2>
+  <p>Twelve independent expert analyses, one synthesis, and <strong>three adversarial red-team passes that found 19 fatal
+  findings between them</strong> (6, then 8, then 5). The verdict held at PASS/0% through all three; the arithmetic beneath it was
+  rebuilt twice and still ships with the named defects above.</p>
+  <ul>
+    <li><strong>Draft 1</strong> — TOO UNCERTAIN, 0%. Broken: a $21.8B enterprise-value error omitted cash from its own bridge,
+      inverting the memo's central refutation.</li>
+    <li><strong>Draft 2</strong> — PASS, 0%. Broken: the rewrite was judged a <em>transcription</em> of the red team's own
+      required-changes list rather than an independent re-derivation. <strong>That was the editor's fault</strong> — the feedback
+      prescribed specific numbers instead of naming defects, manufacturing agreement.</li>
+    <li><strong>Draft 3</strong> — PASS, 0%. Commissioned with defects only and no prescribed answers. It produced two findings
+      that <em>beat</em> the red team: the $23B-vs-$20.25B gap is contractual, not tax (killing its own bullish point on primary
+      evidence), and the DISH intercompany loan runs DBS→DISH Network, so cash flows <em>to</em> the bankruptcy estate.</li>
+  </ul>
+  <p>The gate was stopped at three passes rather than run to zero findings: severity was declining, each rewrite spawned fresh
+  errors, and every remaining correction pushes toward the verdict already reached. That was a judgment call, and it is disclosed
+  rather than hidden.</p>
+</section>
+
+<p class="foot">
+  <a href="ECHO.html" style="color:var(--s1)">→ Full report: all 12 expert analyses, synthesis and the complete red-team record</a><br><br>
+  Silicon Council · 12-expert framework · generated 5 September 2026. Sources tagged in the underlying report as
+  [SEC] filings, [CALC] derived, [SEARCH] attributed web, [MEDIA] press estimate. <strong>Not investment advice.</strong>
+  Figures marked "not established" are genuinely unresolved and should not be treated as conservative estimates.
+</p>
+
+</div>
+<div class="tt" id="tt"></div>
+
+<script>
+(function(){
+  const tt=document.getElementById('tt');
+  function show(e,html){tt.innerHTML=html;tt.style.opacity=1;move(e);}
+  function move(e){const p=12;let x=e.clientX+p,y=e.clientY+p;const r=tt.getBoundingClientRect();
+    if(x+r.width>innerWidth-8)x=e.clientX-r.width-p; if(y+r.height>innerHeight-8)y=e.clientY-r.height-p;
+    tt.style.left=x+'px';tt.style.top=y+'px';}
+  function hide(){tt.style.opacity=0;}
+  const SV=(t,a)=>{const el=document.createElementNS('http://www.w3.org/2000/svg',t);
+    for(const k in a)el.setAttribute(k,a[k]);return el;};
+
+  /* ---------- FAIR VALUE RANGE CHART ---------- */
+  (function(){
+    const svg=document.getElementById('fvChart');
+    const W=860,H=340,L=170,R=34,T=26,B=54;
+    const pw=W-L-R, ph=H-T-B;
+    const data=[
+      {label:'$11.1B',sub:'company-linked',lo:7.15,hi:26.92,mid:23.68},
+      {label:'$32B',sub:'media · SpaceX $1.45T',lo:51.72,hi:71.49,mid:68.25},
+      {label:'$53B',sub:'media / analyst',lo:96.52,hi:116.29,mid:113.05}
+    ];
+    const min=-20,max=130;
+    const x=v=>L+(v-min)/(max-min)*pw;
+    const bandH=44, gap=(ph-data.length*bandH)/(data.length+1);
+
+    [-20,0,20,40,60,80,100,120].forEach(v=>{
+      svg.appendChild(SV('line',{x1:x(v),x2:x(v),y1:T,y2:T+ph,stroke:'var(--grid)','stroke-width':1}));
+      svg.appendChild(SV('text',{x:x(v),y:T+ph+20,'text-anchor':'middle','font-size':11,fill:'var(--muted)'})).textContent='$'+v;
+    });
+    // zero line emphasis
+    svg.appendChild(SV('line',{x1:x(0),x2:x(0),y1:T,y2:T+ph,stroke:'var(--axis)','stroke-width':1}));
+
+    data.forEach((d,i)=>{
+      const y=T+gap+i*(bandH+gap);
+      svg.appendChild(SV('text',{x:L-12,y:y+bandH/2-3,'text-anchor':'end','font-size':13.5,fill:'var(--ink)','font-weight':600}))
+         .textContent=d.label;
+      svg.appendChild(SV('text',{x:L-12,y:y+bandH/2+13,'text-anchor':'end','font-size':11,fill:'var(--muted)'}))
+         .textContent=d.sub;
+      const bw=Math.max(x(d.hi)-x(d.lo),3);
+      const bar=SV('rect',{x:x(d.lo),y:y+9,width:bw,height:bandH-18,rx:4,fill:'var(--s1)'});
+      svg.appendChild(bar);
+      const lab=SV('text',{x:x(d.hi)+9,y:y+bandH/2+4,'font-size':12,fill:'var(--ink-2)'});
+      lab.textContent='$'+d.lo.toFixed(0)+'–'+d.hi.toFixed(0);
+      svg.appendChild(lab);
+      const hit=SV('rect',{x:x(d.lo),y:y,width:bw,height:bandH,fill:'transparent',style:'cursor:pointer'});
+      hit.addEventListener('mouseenter',e=>show(e,'<b>SpaceX stake at '+d.label+'</b>'+
+        'After 25% DLOM: $'+d.mid.toFixed(2)+'/sh<br>Fair value: $'+d.lo.toFixed(2)+' – $'+d.hi.toFixed(2)+
+        '<br>vs price $89.80 → <strong>'+(d.hi<89.8?'below':'above')+'</strong>'));
+      hit.addEventListener('mousemove',move); hit.addEventListener('mouseleave',hide);
+      svg.appendChild(hit);
+    });
+
+    // price reference line
+    svg.appendChild(SV('line',{x1:x(89.8),x2:x(89.8),y1:T-6,y2:T+ph+4,stroke:'var(--critical)','stroke-width':2}));
+    const pl=SV('text',{x:x(89.8),y:T-11,'text-anchor':'middle','font-size':12,'font-weight':650,fill:'var(--critical)'});
+    pl.textContent='$89.80'; svg.appendChild(pl);
+    svg.appendChild(SV('line',{x1:L,x2:L+pw,y1:T+ph,y2:T+ph,stroke:'var(--axis)','stroke-width':1}));
+    const ax=SV('text',{x:L+pw/2,y:H-6,'text-anchor':'middle','font-size':11.5,fill:'var(--muted)'});
+    ax.textContent='Fair value per diluted share'; svg.appendChild(ax);
+  })();
+
+  /* ---------- COUNCIL VOTE ---------- */
+  (function(){
+    const svg=document.getElementById('voteChart');
+    const W=860,H=190,L=92,R=30,T=16,B=40;
+    const pw=W-L-R, ph=H-T-B;
+    const data=[
+      {k:'WAIT',n:7,who:'Bezos 86 · Buffett 88 · Cook 78 · Sherlock 30 · Futurist 55 · Biologist 55 · Historian 55'},
+      {k:'PASS',n:3,who:'Jobs 84 · Psychologist 82 · Anthropologist 62'},
+      {k:'BUY',n:1,who:'Lynch 58 — 3% starter, only MODERATE moat flag'},
+      {k:'SELL',n:1,who:'Burry 78 — 0.5% short'}
+    ];
+    const max=8, x=v=>L+v/max*pw;
+    const bh=26, gap=(ph-data.length*bh)/(data.length+1);
+    for(let v=0;v<=max;v+=2){
+      svg.appendChild(SV('line',{x1:x(v),x2:x(v),y1:T,y2:T+ph,stroke:'var(--grid)','stroke-width':1}));
+      svg.appendChild(SV('text',{x:x(v),y:T+ph+19,'text-anchor':'middle','font-size':11,fill:'var(--muted)'})).textContent=v;
+    }
+    data.forEach((d,i)=>{
+      const y=T+gap+i*(bh+gap);
+      svg.appendChild(SV('text',{x:L-12,y:y+bh/2+4,'text-anchor':'end','font-size':13,fill:'var(--ink)','font-weight':600}))
+         .textContent=d.k;
+      const bw=Math.max(x(d.n)-L,3);
+      svg.appendChild(SV('rect',{x:L,y:y,width:bw,height:bh,rx:4,fill:'var(--s1)'}));
+      svg.appendChild(SV('text',{x:L+bw+10,y:y+bh/2+4,'font-size':12.5,fill:'var(--ink-2)'})).textContent=d.n;
+      const hit=SV('rect',{x:L,y:y,width:bw,height:bh,fill:'transparent',style:'cursor:pointer'});
+      hit.addEventListener('mouseenter',e=>show(e,'<b>'+d.k+' — '+d.n+' of 12</b>'+d.who));
+      hit.addEventListener('mousemove',move); hit.addEventListener('mouseleave',hide);
+      svg.appendChild(hit);
+    });
+    svg.appendChild(SV('line',{x1:L,x2:L+pw,y1:T+ph,y2:T+ph,stroke:'var(--axis)','stroke-width':1}));
+    svg.appendChild(SV('text',{x:L+pw/2,y:H-4,'text-anchor':'middle','font-size':11.5,fill:'var(--muted)'}))
+       .textContent='Number of experts';
+  })();
+
+  document.getElementById('themeBtn').addEventListener('click',()=>{
+    const cur=document.documentElement.getAttribute('data-theme');
+    const dark=cur? cur==='dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-theme',dark?'light':'dark');
+  });
+})();
+</script>
+</body>
+</html>

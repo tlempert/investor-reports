@@ -11,6 +11,7 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 .container{max-width:900px;margin:0 auto;padding:24px}
 h1{font-size:28px;font-weight:700;letter-spacing:-0.025em}
 h2{font-size:18px;font-weight:600;margin-bottom:8px}
+.headline{font-size:20px;font-weight:600;color:#111827;margin:4px 0 6px}
 .subtitle{font-size:13px;color:#6B7280;margin-bottom:16px}
 .header{text-align:center;padding:32px 0 16px}
 .badge{display:inline-block;padding:6px 18px;border-radius:20px;font-weight:700;
@@ -131,6 +132,7 @@ h2{font-size:18px;font-weight:600;margin-bottom:8px}
   <!-- Header -->
   <div class="header">
     <h1>Silicon Council: ADBE</h1>
+    <div class="headline">$252.23 · Buy Zone: $181 – $268</div>
     <div class="subtitle">September 13, 2026</div>
   </div>
 
@@ -499,45 +501,45 @@ h2{font-size:18px;font-weight:600;margin-bottom:8px}
 <li><strong>Pass 1&#x27;s &quot;47%&quot; was adopted verbatim and used as a sizing reason.</strong> Removed from §3 and §4. Draft 1&#x27;s per-scenario multiples (14x/17x/19x) admit no comparable exit-multiple sweep, so no substitute figure is quoted; the size rests on the headroom moving from $3.99 to $15.50 and on the BUY experts&#x27; median.</li>
 </ol>
 <p><strong>The model did not change in draft 3.</strong> Verdict BUY, central $314.97, ceiling $267.72, floor $180.86, MoS 15%, position 4% — every edit above is a relabelling, a decomposition, or a disclosure of something already inside the model. The one substantive reversal is the required-growth reading: at my own exit multiple the bear case <strong>fails</strong> the hurdle row, and draft 2 printed the opposite.</p>
-<p><code>json model_ledger
-{
-  &amp;quot;price&amp;quot;: 252.23,
-  &amp;quot;shares_m&amp;quot;: 397.5,
-  &amp;quot;shares_source&amp;quot;: &amp;quot;[SEC] 10-Q cover count 397.5M as of 2026-06-11 — most recent actually filed count; 413M is FY-end [SEC], ~395M is [MEDIA] Q3 average, ~389M is an [SEC 8-K] Q4 forecast. Central value spans $304 (413M) to $322 (389M) — not load-bearing.&amp;quot;,
-  &amp;quot;owner_eps&amp;quot;: 19.35,
-  &amp;quot;owner_eps_source&amp;quot;: &amp;quot;DERIVED: $7.69B TTM owner earnings [CALC, FINANCIAL PHYSICS] / 397.5M shares [SEC]. Window is Sep-2025 to May-2026 and EXCLUDES Q3 FY2026&amp;#x27;s record OCF; rolled forward it is $20.15 and central value is $328.08.&amp;quot;,
-  &amp;quot;hurdle_low&amp;quot;: 0.08,
-  &amp;quot;hurdle_high&amp;quot;: 0.10,
-  &amp;quot;inputs&amp;quot;: [
-    {&amp;quot;name&amp;quot;: &amp;quot;owner_earnings_ttm_bn&amp;quot;, &amp;quot;value&amp;quot;: 7.69, &amp;quot;source&amp;quot;: &amp;quot;[CALC] FINANCIAL PHYSICS TTM OWNER EARN $7.69B&amp;quot;, &amp;quot;varied&amp;quot;: [7.69, 8.01]},
-    {&amp;quot;name&amp;quot;: &amp;quot;revenue_growth_base&amp;quot;, &amp;quot;value&amp;quot;: 0.075, &amp;quot;source&amp;quot;: &amp;quot;JUDGMENT — 5-yr average starting near the low end of the 10.2% [SEC 8-K] vs ~8.3% [SEARCH per Finsee] dispute and decaying to ~5% on enacted prosumer substitution; realized FY23-FY26 is 10.5-11.9% [SEC]&amp;quot;, &amp;quot;varied&amp;quot;: [0.05, 0.075, 0.10]},
-    {&amp;quot;name&amp;quot;: &amp;quot;net_margin_delta_pts_5yr_base&amp;quot;, &amp;quot;value&amp;quot;: -2.0, &amp;quot;source&amp;quot;: &amp;quot;DERIVED from filed compression: GAAP operating margin 36.6% FY2025 [CALC] / 34.8% Q3 FY2026 / 34.0% Q4 guide [SEC 8-K]; net margin 30.0% FY2025 to 28.7% TTM [CALC]. Base extends at ~half the recent pace.&amp;quot;, &amp;quot;varied&amp;quot;: [-5.0, -2.0, 1.0]},
-    {&amp;quot;name&amp;quot;: &amp;quot;net_share_shrink_base&amp;quot;, &amp;quot;value&amp;quot;: 0.035, &amp;quot;source&amp;quot;: &amp;quot;DERIVED: 475M (2021) to ~389M (Q4 FY2026 guide) [SEC] = -3.92%/yr realized; base set BELOW realized because the incoming CEO championed the Workfront and Semrush acquisitions [MEDIA] and may route buyback cash to M&amp;amp;A&amp;quot;, &amp;quot;varied&amp;quot;: [0.025, 0.035, 0.040]},
-    {&amp;quot;name&amp;quot;: &amp;quot;owner_eps_cagr_base&amp;quot;, &amp;quot;value&amp;quot;: 0.098, &amp;quot;source&amp;quot;: &amp;quot;DERIVED: (1.075) x (26.7/28.7)^0.2 / (1-0.035) = 1.0980. Realized FY2022-TTM is 14.6% [CALC], so the base underwrites a one-third deceleration.&amp;quot;, &amp;quot;varied&amp;quot;: [0.0365, 0.0980, 0.1537]},
-    {&amp;quot;name&amp;quot;: &amp;quot;exit_multiple&amp;quot;, &amp;quot;value&amp;quot;: 16, &amp;quot;source&amp;quot;: &amp;quot;JUDGMENT, itemized: 18x top of the Quality band (0 SEVERE, ROIC 40.0% vs 11.4% peer median, 89% gross margin, 96.4% recurring) LESS 1.0x disclosure opacity LESS 1.0x regulatory attack on switching costs. Held CONSTANT across scenarios so growth carries pricing power and the multiple carries durability.&amp;quot;, &amp;quot;varied&amp;quot;: [15, 16, 17, 18]},
-    {&amp;quot;name&amp;quot;: &amp;quot;discount_rate&amp;quot;, &amp;quot;value&amp;quot;: 0.09, &amp;quot;source&amp;quot;: &amp;quot;JUDGMENT — dossier LOCAL COST OF EQUITY band 8-10%, midpoint used&amp;quot;, &amp;quot;varied&amp;quot;: [0.08, 0.09, 0.10]},
-    {&amp;quot;name&amp;quot;: &amp;quot;scenario_weights_bear_base_bull&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;30/50/20&amp;quot;, &amp;quot;source&amp;quot;: &amp;quot;JUDGMENT — all three published in §3 with verdict consequences; none flips the verdict. Bear weight rises to 45-50% if Q4 organic ARR prints below ~8%.&amp;quot;, &amp;quot;varied&amp;quot;: [&amp;quot;30/50/20&amp;quot;, &amp;quot;40/45/15&amp;quot;, &amp;quot;20/50/30&amp;quot;]},
-    {&amp;quot;name&amp;quot;: &amp;quot;freemium_conversion_rate&amp;quot;, &amp;quot;value&amp;quot;: 0.0, &amp;quot;source&amp;quot;: &amp;quot;JUDGMENT — not disclosed anywhere in the dossier; assigned zero in bear and base (80% of weight), credited only in bull; value forgone $18.03/share&amp;quot;, &amp;quot;varied&amp;quot;: [0.0]},
-    {&amp;quot;name&amp;quot;: &amp;quot;gaap_eps_ttm&amp;quot;, &amp;quot;value&amp;quot;: 18.19, &amp;quot;source&amp;quot;: &amp;quot;DERIVED: $7.23B TTM net income [CALC] / 397.5M shares [SEC] — used only for the implied-multiple print; note the window/point-in-time mismatch vs FY2025&amp;#x27;s filed 427.0M diluted&amp;quot;, &amp;quot;varied&amp;quot;: []}
+<pre><code class="language-json">{
+  &quot;price&quot;: 252.23,
+  &quot;shares_m&quot;: 397.5,
+  &quot;shares_source&quot;: &quot;[SEC] 10-Q cover count 397.5M as of 2026-06-11 — most recent actually filed count; 413M is FY-end [SEC], ~395M is [MEDIA] Q3 average, ~389M is an [SEC 8-K] Q4 forecast. Central value spans $304 (413M) to $322 (389M) — not load-bearing.&quot;,
+  &quot;owner_eps&quot;: 19.35,
+  &quot;owner_eps_source&quot;: &quot;DERIVED: $7.69B TTM owner earnings [CALC, FINANCIAL PHYSICS] / 397.5M shares [SEC]. Window is Sep-2025 to May-2026 and EXCLUDES Q3 FY2026's record OCF; rolled forward it is $20.15 and central value is $328.08.&quot;,
+  &quot;hurdle_low&quot;: 0.08,
+  &quot;hurdle_high&quot;: 0.10,
+  &quot;inputs&quot;: [
+    {&quot;name&quot;: &quot;owner_earnings_ttm_bn&quot;, &quot;value&quot;: 7.69, &quot;source&quot;: &quot;[CALC] FINANCIAL PHYSICS TTM OWNER EARN $7.69B&quot;, &quot;varied&quot;: [7.69, 8.01]},
+    {&quot;name&quot;: &quot;revenue_growth_base&quot;, &quot;value&quot;: 0.075, &quot;source&quot;: &quot;JUDGMENT — 5-yr average starting near the low end of the 10.2% [SEC 8-K] vs ~8.3% [SEARCH per Finsee] dispute and decaying to ~5% on enacted prosumer substitution; realized FY23-FY26 is 10.5-11.9% [SEC]&quot;, &quot;varied&quot;: [0.05, 0.075, 0.10]},
+    {&quot;name&quot;: &quot;net_margin_delta_pts_5yr_base&quot;, &quot;value&quot;: -2.0, &quot;source&quot;: &quot;DERIVED from filed compression: GAAP operating margin 36.6% FY2025 [CALC] / 34.8% Q3 FY2026 / 34.0% Q4 guide [SEC 8-K]; net margin 30.0% FY2025 to 28.7% TTM [CALC]. Base extends at ~half the recent pace.&quot;, &quot;varied&quot;: [-5.0, -2.0, 1.0]},
+    {&quot;name&quot;: &quot;net_share_shrink_base&quot;, &quot;value&quot;: 0.035, &quot;source&quot;: &quot;DERIVED: 475M (2021) to ~389M (Q4 FY2026 guide) [SEC] = -3.92%/yr realized; base set BELOW realized because the incoming CEO championed the Workfront and Semrush acquisitions [MEDIA] and may route buyback cash to M&amp;A&quot;, &quot;varied&quot;: [0.025, 0.035, 0.040]},
+    {&quot;name&quot;: &quot;owner_eps_cagr_base&quot;, &quot;value&quot;: 0.098, &quot;source&quot;: &quot;DERIVED: (1.075) x (26.7/28.7)^0.2 / (1-0.035) = 1.0980. Realized FY2022-TTM is 14.6% [CALC], so the base underwrites a one-third deceleration.&quot;, &quot;varied&quot;: [0.0365, 0.0980, 0.1537]},
+    {&quot;name&quot;: &quot;exit_multiple&quot;, &quot;value&quot;: 16, &quot;source&quot;: &quot;JUDGMENT, itemized: 18x top of the Quality band (0 SEVERE, ROIC 40.0% vs 11.4% peer median, 89% gross margin, 96.4% recurring) LESS 1.0x disclosure opacity LESS 1.0x regulatory attack on switching costs. Held CONSTANT across scenarios so growth carries pricing power and the multiple carries durability.&quot;, &quot;varied&quot;: [15, 16, 17, 18]},
+    {&quot;name&quot;: &quot;discount_rate&quot;, &quot;value&quot;: 0.09, &quot;source&quot;: &quot;JUDGMENT — dossier LOCAL COST OF EQUITY band 8-10%, midpoint used&quot;, &quot;varied&quot;: [0.08, 0.09, 0.10]},
+    {&quot;name&quot;: &quot;scenario_weights_bear_base_bull&quot;, &quot;value&quot;: &quot;30/50/20&quot;, &quot;source&quot;: &quot;JUDGMENT — all three published in §3 with verdict consequences; none flips the verdict. Bear weight rises to 45-50% if Q4 organic ARR prints below ~8%.&quot;, &quot;varied&quot;: [&quot;30/50/20&quot;, &quot;40/45/15&quot;, &quot;20/50/30&quot;]},
+    {&quot;name&quot;: &quot;freemium_conversion_rate&quot;, &quot;value&quot;: 0.0, &quot;source&quot;: &quot;JUDGMENT — not disclosed anywhere in the dossier; assigned zero in bear and base (80% of weight), credited only in bull; value forgone $18.03/share&quot;, &quot;varied&quot;: [0.0]},
+    {&quot;name&quot;: &quot;gaap_eps_ttm&quot;, &quot;value&quot;: 18.19, &quot;source&quot;: &quot;DERIVED: $7.23B TTM net income [CALC] / 397.5M shares [SEC] — used only for the implied-multiple print; note the window/point-in-time mismatch vs FY2025's filed 427.0M diluted&quot;, &quot;varied&quot;: []}
   ],
-  &amp;quot;central_value&amp;quot;: 314.97,
-  &amp;quot;ceiling&amp;quot;: 267.72,
-  &amp;quot;floor&amp;quot;: 180.86,
-  &amp;quot;margin_of_safety&amp;quot;: 0.15,
-  &amp;quot;verdict&amp;quot;: &amp;quot;BUY&amp;quot;,
-  &amp;quot;position_pct&amp;quot;: 4,
-  &amp;quot;council_tally&amp;quot;: {&amp;quot;BUY&amp;quot;: 6, &amp;quot;HOLD&amp;quot;: 4, &amp;quot;PASS&amp;quot;: 2, &amp;quot;SELL&amp;quot;: 0},
-  &amp;quot;required_growth&amp;quot;: {
-    &amp;quot;horizon_years&amp;quot;: 5,
-    &amp;quot;hurdle&amp;quot;: 0.10,
-    &amp;quot;rows&amp;quot;: [
-      {&amp;quot;multiple&amp;quot;: 15, &amp;quot;required_eps&amp;quot;: 27.08, &amp;quot;cagr&amp;quot;: 0.0695},
-      {&amp;quot;multiple&amp;quot;: 16, &amp;quot;required_eps&amp;quot;: 25.39, &amp;quot;cagr&amp;quot;: 0.0559},
-      {&amp;quot;multiple&amp;quot;: 18, &amp;quot;required_eps&amp;quot;: 22.57, &amp;quot;cagr&amp;quot;: 0.0312},
-      {&amp;quot;multiple&amp;quot;: 20, &amp;quot;required_eps&amp;quot;: 20.31, &amp;quot;cagr&amp;quot;: 0.0097}
+  &quot;central_value&quot;: 314.97,
+  &quot;ceiling&quot;: 267.72,
+  &quot;floor&quot;: 180.86,
+  &quot;margin_of_safety&quot;: 0.15,
+  &quot;verdict&quot;: &quot;BUY&quot;,
+  &quot;position_pct&quot;: 4,
+  &quot;council_tally&quot;: {&quot;BUY&quot;: 6, &quot;HOLD&quot;: 4, &quot;PASS&quot;: 2, &quot;SELL&quot;: 0},
+  &quot;required_growth&quot;: {
+    &quot;horizon_years&quot;: 5,
+    &quot;hurdle&quot;: 0.10,
+    &quot;rows&quot;: [
+      {&quot;multiple&quot;: 15, &quot;required_eps&quot;: 27.08, &quot;cagr&quot;: 0.0695},
+      {&quot;multiple&quot;: 16, &quot;required_eps&quot;: 25.39, &quot;cagr&quot;: 0.0559},
+      {&quot;multiple&quot;: 18, &quot;required_eps&quot;: 22.57, &quot;cagr&quot;: 0.0312},
+      {&quot;multiple&quot;: 20, &quot;required_eps&quot;: 20.31, &quot;cagr&quot;: 0.0097}
     ]
   }
-}</code></p>
+}
+</code></pre>
 <p><strong>Required growth table</strong> — pure arithmetic on price and hurdle, unchanged because neither price nor owner EPS moved. Year-5 price needed for a 10% hurdle: $252.23 × 1.10⁵ = <strong>$406.22</strong>.</p>
 <table>
 <thead>
@@ -1713,7 +1715,7 @@ MOAT FLAG: MODERATE
 <hr />
 <h3>MODERATE — the bull&#x27;s +1 margin point and the bear&#x27;s −5 are the only unsourced components in a model that advertises full component sourcing</h3>
 <p>&gt; &quot;### Every scenario CAGR decomposed into <strong>sourced</strong> components&quot;
-&gt; <code>{&amp;quot;name&amp;quot;: &amp;quot;net_margin_delta_pts_5yr_base&amp;quot;, &amp;quot;value&amp;quot;: -2.0, &amp;quot;source&amp;quot;: &amp;quot;DERIVED from filed compression: …&amp;quot;, &amp;quot;varied&amp;quot;: [-5.0, -2.0, 1.0]}</code></p>
+&gt; <code>{"name": "net_margin_delta_pts_5yr_base", "value": -2.0, "source": "DERIVED from filed compression: …", "varied": [-5.0, -2.0, 1.0]}</code></p>
 <p>The source string documents only compression — GAAP operating margin 36.6% → 34.8% → 34.0% guided, net margin 30.0% → 28.7% — and justifies the base&#x27;s −2 as &quot;roughly half the recent pace.&quot; It says nothing about −5.0 and nothing about +1.0. §6 notes that the bear&#x27;s label &quot;now names what it asserts: a 5-point net-margin destruction&quot; — naming an assertion is not sourcing it, and pass 1&#x27;s complaint about draft 1&#x27;s bear was precisely that permanent margin destruction &quot;appears nowhere in the dossier or in any expert block.&quot; The bull&#x27;s +1 point is a <em>reversal</em> of a filed four-quarter compression trend, with no cited mechanism.</p>
 <p>I checked both directions before assigning severity. The bull&#x27;s +1 point is worth <strong>+$8.31</strong> of central value at its 20% weight; the bear&#x27;s −5 points deny <strong>−$9.14</strong> at its 30% weight. <strong>Net effect of the two unsourced branches: −$0.83.</strong> They approximately cancel, which is why this is MODERATE and not more. But a model whose selling point is that every component is sourced has two components that are not, and they are the two that bracket it.</p>
 <p><strong>Operation:</strong> source or explicitly declare-as-judgment each endpoint of every <code>varied</code> array, not only the base value, and for a component whose bull branch reverses a filed trend, name the mechanism that reverses it.</p>
